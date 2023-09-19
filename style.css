@@ -1,0 +1,637 @@
+/*
+Theme Name: Bareh
+Theme URI: https://bareh.com
+Author: Ali Heydari
+Author URI: https://brushcode.ir/
+Description: Bareh is a website for showing information about persian movies, classical films and tv-shows.
+Version: 1.0.0
+*/
+
+/* Global */
+
+@font-face {
+    font-family: 'vazir400';
+    src: url('fonts/Vazirmatn/vazir400-new.ttf') format('truetype'), url('/fonts/Vazirmatn/vazir400-new.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir700';
+    src: url('fonts/Vazirmatn/vazir700-new.ttf') format('truetype'), url('/fonts/Vazirmatn/vazir700-new.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+::selection {
+    color: #fff;
+    background-color: rgba(106, 106, 106, 1);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b5b5b5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b5b5b5;
+}
+
+.text-beige1 {
+    color: #D8CFC9;
+}
+
+.bg-beige1 {
+    background-color: #D8CFC9;
+}
+
+.text-beige2 {
+    color: #D7C4AF;
+}
+
+.bg-beige2 {
+    background-color: #D7C4AF;
+}
+
+.text-beige3 {
+    color: #D7C4AF;
+}
+
+.bg-beige3 {
+    background-color: #D7C4AF;
+}
+
+.text-gray1 {
+    color: #4A4A4A;
+}
+
+.bg-gray1 {
+    background-color: #4A4A4A;
+}
+
+.border-gray1 {
+    border-color: #4A4A4A !important;
+}
+
+.text-gray2 {
+    color: #666666;
+}
+
+.border-gray2 {
+    border-color: #666666 !important;
+}
+
+.bg-gray2 {
+    background-color: #666666;
+}
+
+.text-gray3 {
+    color: #8A8A8A;
+}
+
+.bg-gray3 {
+    background-color: #8A8A8A;
+}
+
+.border-gray3 {
+    border-color: #8A8A8A !important;
+}
+
+.text-gray4 {
+    color: #B8B8B8;
+}
+
+.bg-gray4 {
+    background-color: #B8B8B8;
+}
+
+.border-gray4 {
+    border-color: #B8B8B8 !important;
+}
+
+.text-gray5 {
+    color: #333333;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+body * {
+    outline: none;
+}
+
+body a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: unset;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    direction: rtl;
+    font-family: 'vazir400';
+    background-image: url('images/global/body-bg.jpg');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: repeat-y;
+    /* background-attachment: fixed; */
+}
+
+body.home {
+    background-image: url('images/home/index-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.home .container {
+    max-width: 1000px;
+}
+
+.fw-bold {
+    font-family: 'vazir700';
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.f22 {
+    font-size: 22px;
+}
+
+.l14-52 {
+    line-height: 14.52px;
+}
+
+.l20 {
+    line-height: 20px;
+}
+
+.l30 {
+    line-height: 30px;
+}
+
+.l16-94 {
+    line-height: 16.94px;
+}
+
+.l20 {
+    line-height: 20px;
+}
+
+.l30 {
+    line-height: 30px;
+}
+
+.l19-36 {
+    line-height: 19.36px;
+}
+
+.l25 {
+    line-height: 25px;
+}
+
+.l28 {
+    line-height: 28px;
+}
+
+.l32 {
+    font-size: 16px;
+
+}
+
+.rounded1 {
+    border-radius: 4px;
+}
+
+.rounded2 {
+    border-radius: 8px;
+}
+
+.fillbtn {
+    color: #666666;
+    border: 2px solid #666666;
+    transition: 0.1s all ease-in;
+}
+
+.fillbtn:hover {
+    border-color: #4A4A4A;
+}
+
+.fillbtn:active, .fillbtn:focus {
+    color: #333333;
+    border-color: #333333;
+}
+
+.fillbtn-disabled {
+    color: #B8B8B8;
+    border-color: #B8B8B8;
+}
+
+.strokebtn, .strokebtn2, header nav .nav-item.last .nav-link {
+    color: #fff;
+    background-color: #666666;
+    transition: 0.1s all ease-in;
+}
+
+.strokebtn2 {
+    border: 2px solid #666666;
+}
+
+.strokebtn:hover, .strokebtn2:hover, header nav .nav-item.last .nav-link:hover {
+    color: #CFB89E !important;
+    background-color: #4A4A4A;
+    border-color: #4A4A4A !important;
+}
+
+.strokebtn:active, .strokebtn:focus, .strokebtn2:active, .strokebtn2:focus, header nav .nav-item.last .nav-link:focus, header nav .nav-item.last .nav-link:active {
+    font-family: 'vazir700';
+    color: #CFB89E;
+    background-color: #333333;
+    border-color: #333333 !important;
+}
+
+.strokebtn-disabled {
+    background-color: #B8B8B8;
+}
+
+.disablebtn {
+    background-color: #eaeaea;
+    color: #fff;
+}
+
+#Content {
+    margin-top: 10rem;
+}
+
+@media screen and (min-width: 1600px) {
+    .container-xxl {
+        max-width: 1500px;
+    }
+}
+
+/* Global */
+
+/* Swiper */
+#postSwiper .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#postSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#postSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#postSwiper .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#postSwiper .swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+#postSwiper .mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+#postSwiper .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+#postSwiper .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+#postSwiper .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+#postSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Swiper  */
+
+/* Header  */
+header nav .nav-link {
+    margin: 0px 2rem;
+}
+
+header nav .nav-link.active {
+    font-family: 'vazir700';
+}
+
+.nav-link:hover {
+    color: #4A4A4A;
+}
+
+header nav .nav-item.last .nav-link {
+    border-radius: 8px;
+    padding: 0px 8px !important;
+}
+
+header nav li.current_page_item {
+    font-weight: 700;
+}
+
+body:not(.home) header nav li .nav-link {
+    margin: 0rem 0.5rem 0rem 2rem !important;
+}
+
+body:not(.home) header nav .nav-item.last a.nav-link {
+    padding: .5rem 1.5rem !important;
+}
+
+body:not(.home) header nav .nav-item.last .nav-link {
+    margin: 0px !important;
+}
+
+/* Header  */
+
+/* search header  */
+#filterSec {
+    transition: 0.2s all ease-in;
+    margin-top: 10px;
+    height: 0px;
+    z-index: 9999;
+}
+
+#filterSec .filterTitle {
+    border-bottom: 2px solid #666666;
+}
+
+#filterSec .selectedArea {
+    min-height: 175px;
+}
+
+#filterSec .selectItems {
+    max-height: 0px;
+    overflow: auto;
+}
+
+#filterSec .selectItems, #filterSec .selectItems .item {
+    transition: 0.1s all ease-in;
+}
+
+#filterSec .selectItems .item:hover {
+    padding-right: 7px;
+}
+
+#filterSec .selectedArea .selectedTag, .selectedCat {
+    background-color: #eaeaea;
+}
+
+#filterSec .selectItems .item:not(.clickable) {
+    font-family: 'vazir700';
+}
+
+/* search header  */
+
+/* logo  */
+.logo {
+    padding-top: 8rem;
+}
+
+/* logo  */
+
+/* searchbox */
+#searchbox form i {
+    color: #999;
+    font-size: 23px;
+    margin-left: 6px;
+}
+
+#searchbox #rightCorner {
+    padding: .75rem;
+}
+
+#searchbox form input[type="text"] {
+    min-width: 90%;
+    border-width: 0px;
+    color: #999;
+}
+
+/* searchbox */
+
+/* lastSeen */
+#lastSeen .box {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#lastSeen .box .head {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#lastSeen .box .name {
+    width: 155px;
+}
+
+#lastSeen .box ul {
+    max-height: 100px;
+}
+
+/* lastSeen */
+
+/* non home header */
+#noHomeHeader {
+    background-image: url('images/global/nonhome-header-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 999999;
+}
+
+/* non home header */
+
+/* posts  */
+.post-item .pic {
+    width: 22%;
+    padding-bottom: 22%;
+    height: 0;
+}
+
+.post-item .pic .pic-inside {
+    padding-bottom: 100%;
+    height: 0;
+}
+
+.post-item .pic #hov {
+    width: auto;
+    height: auto;
+    display: none;
+    position: absolute;
+    z-index: 9999;
+}
+
+.post-item .pic #hov img {
+    max-width: 300px;
+    height: auto;
+}
+
+.post-item .post-content {
+    width: 78%;
+}
+
+.post-item .shareIcon {
+    width: 22px;
+    height: 22px;
+    background-image: url('images/global/shareButton.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.post-item .shareIcon ul {
+    cursor: auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 30rem;
+    border-top-left-radius: 0px;
+    left: 120% !important;
+    transition: 0.2s all ease-in;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.post-item .tags a {
+    font-size: 12px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    color: #7d7d7d;
+    padding: 5px 15px;
+    margin: 0px 3px;
+    font-family: 'vazir700';
+}
+
+/* posts  */
+
+/* Single page  */
+#data-tables td {
+    border-width: 0px !important;
+    color: #333333;
+    padding: 5px 35px;
+}
+
+#data-tables td:first-child {
+    color: #666666;
+}
+
+#data-tables .col-lg-6 .bg-white {
+    min-height: 38rem;
+}
+
+#reportBug {
+    border-bottom: 1px dashed #666;
+}
+
+#reportForm,
+#reportForm form br,
+.wpcf7 br {
+    display: none;
+}
+
+#reportForm span.title,
+.wpcf7 span.title 
+{
+    width: 8rem;
+}
+
+#reportForm form span,
+.wpcf7 span {
+    width: 100%;
+}
+
+/* Single page  */
+
+/* category page  */
+#catHandler {
+    margin: 0px .7rem !important;
+}
+
+#categories .box {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+    transition: 0.2s all ease-in;
+}
+
+#categories .box.choose {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+/* category page  */
+
+/* Tabs  */
+#pills-tab li button.active {
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    font-weight: 700;
+    color: #666 !important;
+}
+
+#pills-tab li button:focus {
+    color: unset;
+}
+
+#pills-tabContent {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Tabs  */

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باره |‌ فرهنگ موضوعی سینمای مستند ایران</title>
+    <!-- library imports -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <link href="assets/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <!-- library imports -->
+    <!-- single post swiper css -->
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- single post swiper css  -->
+</head>
+
+<body>
+
+    <!-- non home header  -->
+    <header id="noHomeHeader" class="py-2 position-fixed top-0 w-100">
+        <div class="header-inside position-relative">
+            <div id="filterSec"
+                class="position-absolute top-50 opacity-0 overflow-hidden start-0 w-100 bg-white shadow-lg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="filterSelect position-relative">
+                                <div
+                                    class="filterTitle d-flex justify-content-between align-items-center p-2 cursor-pointer">
+                                    <span class="title fw-bold text-gray2 f16">محل فیلمبرداری</span>
+                                    <i class="fas fa-chevron-down text-gray2 f16"></i>
+                                </div>
+                                <div
+                                    class="selectItems position-absolute border border-gray4 rounded-bottom border-top-0 bg-white top-100 left-0 w-100 h-auto">
+                                    <div class="item clickable pb-2 cursor-pointer">تهران</div>
+                                    <div class="item clickable pb-2 cursor-pointer">شیراز</div>
+                                    <div class="item clickable pb-2 cursor-pointer">مشهد</div>
+                                    <div class="item clickable pb-2 cursor-pointer">خوزستان</div>
+                                    <div class="item clickable pb-2 cursor-pointer">تبریز</div>
+                                    <div class="item clickable pb-2 cursor-pointer">اردبیل</div>
+                                    <div class="item clickable pb-2 cursor-pointer">بوشهر</div>
+                                    <div class="item clickable pb-2 cursor-pointer">کیش</div>
+                                    <div class="item clickable pb-2 cursor-pointer">قشم</div>
+                                    <div class="item clickable pb-2 cursor-pointer">قم</div>
+                                    <div class="item clickable pb-2 cursor-pointer">مشهد</div>
+                                    <div class="item clickable pb-2 cursor-pointer">اصفهان</div>
+                                </div>
+                            </div>
+                            <div id="locationArea" class="selectedArea d-flex align-items-start flex-column my-2"></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="filterSelect position-relative">
+                                <div
+                                    class="filterTitle d-flex justify-content-between align-items-center p-2 cursor-pointer">
+                                    <span class="title fw-bold text-gray2 f16">سال ساخت</span>
+                                    <i class="fas fa-chevron-down text-gray2 f16"></i>
+                                </div>
+                                <div
+                                    class="selectItems position-absolute border border-gray4 rounded-bottom border-top-0 bg-white top-100 left-0 w-100 h-auto">
+                                    <div class="item clickable pb-2 cursor-pointer">1390</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1391</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1392</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1393</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1394</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1395</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1396</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1397</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1398</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1399</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1400</div>
+                                    <div class="item clickable pb-2 cursor-pointer">1401</div>
+                                </div>
+                            </div>
+                            <div id="yearsArea" class="selectedArea d-flex align-items-start flex-column my-2"></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="filterSelect position-relative">
+                                <div
+                                    class="filterTitle d-flex justify-content-between align-items-center p-2 cursor-pointer">
+                                    <span class="title fw-bold text-gray2 f16">مدت زمان</span>
+                                    <i class="fas fa-chevron-down text-gray2 f16"></i>
+                                </div>
+                                <div
+                                    class="selectItems position-absolute border border-gray4 rounded-bottom border-top-0 bg-white top-100 left-0 w-100 h-auto">
+                                    <div class="item clickable pb-2 cursor-pointer">کوتاه</div>
+                                    <div class="item clickable pb-2 cursor-pointer">متوسط</div>
+                                    <div class="item clickable pb-2 cursor-pointer">بلند</div>
+                                    <div class="item clickable pb-2 cursor-pointer">خیلی طولانی</div>
+                                </div>
+                            </div>
+                            <div id="timeArea" class="selectedArea d-flex align-items-start flex-column my-2"></div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center" id="filterButtons">
+                        <button id="filterHandler"
+                            class="strokebtn2 w-auto d-inline-block mx-1 py-2 rounded-2 border-gray2">اعمال
+                            فیلتر</button>
+                        <button id="filterRemover"
+                            class="fillbtn w-auto bg-white mx-1 d-inline-block py-2 rounded-2">حذف همه فیلترها</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-lg-1 py-1">
+                        <a href="#" class="d-inline-block" title="باره">
+                            <img src="images/global/logo.svg" alt="باره" class="img-fluid" width="50" />
+                        </a>
+                    </div>
+                    <div class="col-lg-7 d-flex align-items-center" id="searchbox">
+                        <div class="searchContainer bg-white rounded-2 position-relative overflow-hidden w-100">
+                            <div class="row">
+                                <form method="POST" class="d-flex">
+                                    <div class="col-md-9 d-flex align-items-center" id="rightCorner">
+                                        <i class="fa-regular fa-magnifying-glass"></i>
+                                        <input type="search" class="f14 l20"
+                                            placeholder="جستجو با نام فیلم، کارگردان یا نام تهیه‌کننده " />
+                                    </div>
+                                    <div class="col-md-3 d-flex align-items-center p-0 justify-content-end">
+                                        <span id="filters"
+                                            class="text-gray2 bg-white border-0 fw-bold border-right py-1 px-3 border-end border-2 border-gray3 cursor-pointer">
+                                            فیلترها
+                                        </span>
+                                        <input type="submit" value="جستجو کنید"
+                                            class="p-0 top-0 start-0 h-100 px-4 border-0 rounded-left fw-bold strokebtn" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                        <nav class="nav justify-content-end align-items-center f16 l25 w-100">
+                            <a class="nav-link text-gray1 p-0 m-0" href="#">دسته‌بندی فیلم‌ها</a>
+                            <a class="nav-link text-gray1 p-0 ms-2" href="#">شناسنامه باره</a>
+                            <a class="nav-link rounded-2 py-2 px-4 ms-2 strokebtn" href="#">ثبت فیلم</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- non home header  -->
+
+    <div id="Content">
+        <div class="container">
+
+            <!-- posts  -->
+            <section class="posts">
+                <div class="row">
+
+                    <div class="col-12 mb-3">
+                        <div
+                            class="post-item bg-white d-flex w-100 rounded-2 justify-content-between align-items-center">
+                            <div class="post-content p-3">
+                                <div class="titleShare d-flex justify-content-between align-items-center pb-2">
+                                    <span class="mainTitle f22 l28 text-gray2 fw-bold">زینت</span>
+                                    <div class="shareIcon cursor-pointer position-relative">
+                                        <ul class="position-absolute bg-white p-2 m-0 top-50 list-unstyled">
+                                            <li class="mb-3"><a href="#" class="d-flex justify-content-center"><i
+                                                        class="fa-light fa-link f16 text-gray2"></i></a></li>
+                                            <li class="mb-3"><a href="#" class="d-flex justify-content-center"><i
+                                                        class="fa-light fa-paper-plane f16 text-gray2"></i></a></li>
+                                            <li><a href="#" class="d-flex justify-content-center"><i
+                                                        class="fa-brands fa-whatsapp f16 text-gray2"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="director d-block f16 fw-bold l28 text-gray2 pb-5">کارگردان: <span>ابراهیم
+                                        مختاری</span></div>
+                                <div class="tagsTime d-flex justify-content-between align-items-center pt-5">
+                                    <div class="tags d-flex">
+                                        <a href="#">مردم و قوم شناسی</a>
+                                        <a href="#">میراث فرهنگی</a>
+                                        <a href="#">اجتماعی</a>
+                                    </div>
+                                    <div class="time d-flex align-items-center">
+                                        <i class="fa-light fa-clock-three text-gray2 f16 ms-3"></i>
+                                        <span class="f16 l20 text-gray2"><span class="mx-1">120</span>دقیقه</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pic position-relative">
+                                <div class="pic-inside position-relative w-100 overflow-hidden">
+                                    <img src="images/posts/zinat.jpg" alt="زینت"
+                                        class="mainImg position-absolute start-0 w-100 h-auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- posts  -->
+
+            <!-- Content  -->
+            <div class="row post-content f14 l28 text-gray2 bg-white m-0 rounded-2 pt-3 px-1">
+                <p>
+                    این فیلم درباره‌ی نحوه‌ی کار در یک دفتر همسریابی در تهران است.
+                </p>
+            </div>
+            <!-- Content  -->
+
+            <!-- Data table  -->
+            <div class="row m-0 my-3" id="data-tables">
+                <div class="col-lg-6 pe-0 ps-1">
+                    <div class="bg-white rounded-2 py-5 px-3">
+                        <table class="table text-end f14 l28 w-auto m-auto">
+                            <tbody>
+                                <tr>
+                                    <td>سال ساخت</td>
+                                    <td>1396</td>
+                                </tr>
+                                <tr>
+                                    <td>فرمت</td>
+                                    <td>HD</td>
+                                </tr>
+                                <tr>
+                                    <td>مدت زمان</td>
+                                    <td>۶۱ دقیقه</td>
+                                </tr>
+                                <tr>
+                                    <td>کارگردان</td>
+                                    <td class="fw-bold">آزادی مقدم</td>
+                                </tr>
+                                <tr>
+                                    <td>تهیه کننده</td>
+                                    <td>آزادی مقدم</td>
+                                </tr>
+                                <tr>
+                                    <td>سال ساخت</td>
+                                    <td>1396</td>
+                                </tr>
+                                <tr>
+                                    <td>فرمت</td>
+                                    <td>HD</td>
+                                </tr>
+                                <tr>
+                                    <td>مدت زمان</td>
+                                    <td>۶۱ دقیقه</td>
+                                </tr>
+                                <tr>
+                                    <td>تهیه کننده</td>
+                                    <td>آزادی مقدم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-0">
+                    <div class="bg-white rounded-2 py-5 px-3">
+                        <table class="table text-end f14 l28 w-auto m-auto">
+                            <tbody>
+                                <tr>
+                                    <td>سال ساخت</td>
+                                    <td>1396</td>
+                                </tr>
+                                <tr>
+                                    <td>فرمت</td>
+                                    <td>HD</td>
+                                </tr>
+                                <tr>
+                                    <td>مدت زمان</td>
+                                    <td>۶۱ دقیقه</td>
+                                </tr>
+                                <tr>
+                                    <td>کارگردان</td>
+                                    <td class="fw-bold">آزادی مقدم</td>
+                                </tr>
+                                <tr>
+                                    <td>تهیه کننده</td>
+                                    <td>آزادی مقدم</td>
+                                </tr>
+                                <tr>
+                                    <td>سال ساخت</td>
+                                    <td>1396</td>
+                                </tr>
+                                <tr>
+                                    <td>فرمت</td>
+                                    <td>HD</td>
+                                </tr>
+                                <tr>
+                                    <td>مدت زمان</td>
+                                    <td>۶۱ دقیقه</td>
+                                </tr>
+                                <tr>
+                                    <td>تهیه کننده</td>
+                                    <td>آزادی مقدم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Data table  -->
+
+            <!-- post slider  -->
+            <div class="row m-0" id="postSwiper" dir="ltr">
+                <div class="col-12 bg-white rounded-2 p-lg-5">
+
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <video width="100%" height="100%" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                                    Your browser does not support HTML video.
+                                </video>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/slide1.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper pb-0">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/posts/slider/thumb1.jpg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="assets/js/swiper-bundle.min.js"></script>
+
+            <script>
+                var swiper = new Swiper("#postSwiper .mySwiper", {
+                    spaceBetween: 10,
+                    slidesPerView: 8,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                });
+                var swiper2 = new Swiper("#postSwiper .mySwiper2", {
+                    spaceBetween: 10,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                });
+            </script>
+
+            <!-- post slider  -->
+
+            <div class="col-12">
+                <div class="d-flex align-items-end my-4 f16 l28 text-gray2">
+                    <span class="pb-1">اطلاعات این فیلم مشکلی دارد؟ </span>
+                    <span class="cursor-pointer fw-bold pb-1 me-3" id="reportBug">
+                        گزارش مشکل
+                    </span>
+                </div>
+            </div>
+
+            <!-- lastSeen boxes  -->
+            <section id="lastSeen" class="py-5">
+                <div class="row m-0">
+
+                    <div class="col-md-6 pe-md-0">
+                        <div class="box rounded-2 p-0 box overflow-hidden">
+                            <div class="head p-3 bg-white">
+                                <span class="f16 l20 text-gray2 fw-bold">از همین کارگردان</span>
+                            </div>
+                            <div class="lastContent p-3 pe-1">
+                                <ul class="list-unstyled p-0 m-0 pe-3 overflow-auto" dir="ltr">
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">پروژه ازدواج</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">حسام اسلامی</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">خیزاب</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">علی حیدری</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">داخلی-تهران</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">پوریا غفوری</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">پروژه ازدواج</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">حسام اسلامی</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ps-md-0">
+                        <div class="box rounded-2 p-0 box overflow-hidden">
+                            <div class="head p-3 bg-white">
+                                <span class="f16 l20 text-gray2 fw-bold">فیلم هایی با موضوع مشابه</span>
+                            </div>
+                            <div class="lastContent p-3 pe-1">
+                                <ul class="list-unstyled p-0 m-0 pe-3 overflow-auto" dir="ltr">
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">پروژه ازدواج</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">حسام اسلامی</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">خیزاب</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">علی حیدری</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">داخلی-تهران</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">پوریا غفوری</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="position-relative pb-1 text-end" dir="rtl">
+                                        <a href="#" class="d-block">
+                                            <span class="name d-inline-flex">
+                                                <span class="nameInside fw-bold f16 l30 text-gray2">پروژه ازدواج</span>
+                                            </span>
+                                            <span class="director f12 l30 text-gray2">حسام اسلامی</span>
+                                            <i
+                                                class="fas fa-angle-left position-absolute top-50 start-0 translate-middle-y f21 text-gray2"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- lastSeen boxes  -->
+
+        </div>
+    </div>
+
+
+    <!-- footer  -->
+    <footer class="py-4">
+        <span class="text-gray2 f12 l28 d-flex align-items-center justify-content-center">
+            کپی‌ رایت متعلق به آزادی مقدم
+        </span>
+    </footer>
+    <!-- footer  -->
+
+    <!-- library imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- library imports -->
+</body>
+
+</html>
